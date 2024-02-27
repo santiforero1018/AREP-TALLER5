@@ -15,7 +15,7 @@ Dentro de la carpeta taller5, ejecutamos el siguiente comando que usara el Docke
 ```bash
 docker build --tag dockersparkprimer .
 ```
-![ejecución del comando build]("README-IMG/docker-build")
+![ejecución del comando build]("README-IMG/docker-build.png")
 
 Luego se pone a correr una serie de contenedores con los siguientes comandos
 ```bash
@@ -23,7 +23,7 @@ docker run -d -p 34000:57000 --name firstdockercontainer dockersparkprimer
 docker run -d -p 34001:57000 --name firstdockercontainer2 dockersparkprimer
 docker run -d -p 34002:57000 --name firstdockercontainer3 dockersparkprimer
 ```
-![imagen corriendo containers]("README-IMG/docker-run")
+![imagen corriendo containers]("README-IMG/docker-run.png")
 
 ### Usando docker compose u MongoDb
 
@@ -31,12 +31,12 @@ usando el archivo docker-compose.yml y el siguiente comando para componer nuestr
 ```bash
 docker-compose up -d
 ```
-![iamgen containers correindo en el dashboard]("README-IMG/dashboard-allContainers")
-![imagen comando usado](README-IMG/docker-compose)
+![iamgen containers correindo en el dashboard]("README-IMG/dashboard-allContainers.png")
+![imagen comando usado](README-IMG/docker-compose.png)
 
 ### Subiendo imagen a docker hub
  usamos el siguiente comando mostrado en la imagen para hacer el push, anteriormente damos un tag a la imagen
- ![imagen push]("README-IMG/docker-push")
+ ![imagen push]("README-IMG/docker-push.png")
 
 * comando usado para el tag
   ```
