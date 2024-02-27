@@ -17,8 +17,6 @@ docker build --tag dockersparkprimer .
 ```
 ![ejecución del comando build]("README-IMG/docker-build")
 
-(imagen creacion de la imagen)
-
 Luego se pone a correr una serie de contenedores con los siguientes comandos
 ```bash
 docker run -d -p 34000:57000 --name firstdockercontainer dockersparkprimer
