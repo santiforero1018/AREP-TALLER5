@@ -42,6 +42,10 @@ docker-compose up -d
   ```
   docker tag dockersparkprimer foreman1018/arep-taller5 
   ```
-
+## EJERCICIO PARA DOCKER, MODIFICACION DE PROYECTO CON SERVICIOS REST
+### Servicio para calcular Sin
+### Servicio para calcular Cos
+### Servicio para Calcular palindormos
+### Servicio para calcular la magnitud de un vector
 ## AUTOR
 Santiago Forero Yate, Estudiante de ingeneria de Sistemas
