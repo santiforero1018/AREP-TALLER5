@@ -1,5 +1,12 @@
 # AREP-TALLER5
 
+## PREREQUISITOS
+Estos son los requisitos con los cuales se trabajó este proyecto
+
+1. Docker desktop actualizado
+2. Maven
+3. Java 17
+
 ## MONTAJE Y EJECUCIÓN
 
 ### ejecución del proyecto
@@ -43,6 +50,22 @@ docker-compose up -d
   docker tag dockersparkprimer foreman1018/arep-taller5 
   ```
 ## EJERCICIO PARA DOCKER, MODIFICACION DE PROYECTO CON SERVICIOS REST
+Se modifico la clase de **SpartWebServer.java** para que retorne diferentes servicios para realizar dichas operaciones:
+![ejemplo codigo](README-IMG/basic-code.png)
+
+y siguiendo esta estructura, se añadieron los diferentes servicios.
+
+Luego se volvió a crear la imagen correspondiente en docker para montar un contenedor con el servidor java funcionando
+![build 2](README-IMG/docker-build(2).png)
+
+Ademas, con esta modificacion, se volvió a crear la composición de contenedores
+![segundo compose](README-IMG/docker-compose(2).png)
+
+como prueba de ello, se muestra el resultado final de los contenedores montados:
+![final containers](README-IMG/final-Containers.png)
+
+y el resultado se sube a ![Docker Hub](https://hub.docker.com/)
+![final push](README-IMG/push-final)
 ### Servicio para calcular Sin
 ### Servicio para calcular Cos
 ### Servicio para Calcular palindormos
