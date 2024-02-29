@@ -3,9 +3,10 @@
 ## PREREQUISITOS
 Estos son los requisitos con los cuales se trabajó este proyecto
 
-1. Docker desktop actualizado
-2. Maven
-3. Java 17
+* [Docker desktop](https://www.docker.com/products/docker-desktop/) - Motor de contenedores
+* [Java version 17](https://www.oracle.com/co/java/technologies/downloads/) - Lenguaje de programación usado.
+* [Maven](https://maven.apache.org/download.cgi) - Gestor de dependencias del proyecto
+* [Git](https://git-scm.com/downloads) - Gestion de versiones del proyecto 
 
 ## MONTAJE Y EJECUCIÓN
 
@@ -64,11 +65,45 @@ Ademas, con esta modificacion, se volvió a crear la composición de contenedore
 como prueba de ello, se muestra el resultado final de los contenedores montados:
 ![final containers](README-IMG/final-Containers.png)
 
-y el resultado se sube a ![Docker Hub](https://hub.docker.com/)
+y el resultado se sube a [Docker Hub](https://hub.docker.com/)
 ![final push](README-IMG/push-final)
+
+
+- Para los siguientes calculos, como se mostró anteriormente, se montaron 3 contenedores para su ejecución y prueba, con todos funciona, por lo cual se dejara una URL de prueba por cada servicio.
 ### Servicio para calcular Sin
+```
+http://localhost:34000/seno
+```
+![seno](README-IMG/prueba-seno)
 ### Servicio para calcular Cos
+```
+http://localhost:34000/coseno
+```
+![seno](README-IMG/prueba-coseno)
 ### Servicio para Calcular palindormos
+```
+http://localhost:34000/palindromo
+```
+![seno](README-IMG/prueba-palindromo)
 ### Servicio para calcular la magnitud de un vector
+```
+http://localhost:34000/palindromo
+```
+![seno](README-IMG/prueba-magnitud)
+## DESCARGA DE LA IMAGEN Y USO LOCAL
+Para poder realizar pruebas localmente, ejecute el siguiente comando en consola:
+```
+docker pull foreman1018/arep-taller5:latest
+```
+
+luego ejecute el siguiente comando para poner en funcionamiento un contenedor con la imagen descargada
+```
+docker run -d -p 34000:57000 --name proofcontainer foreman1018/arep-taller5
+```
+
+y puede realizar pruebas con las urls de los servicios suministrados
 ## AUTOR
 Santiago Forero Yate, Estudiante de ingeneria de Sistemas
+## Agradecimientos
+
+* Especial Agradecimiento al profesor [Luis Daniel Benavides Navarro](https://ldbn.is.escuelaing.edu.co/) por brindar el conocimiento necesario en la realización de este trabajo
