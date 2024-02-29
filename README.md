@@ -1,4 +1,4 @@
-# AREP-TALLER5
+# TALLER 5, VIRTUALIZACION Y CONTENEDORES EN DOCKER
 
 ## PREREQUISITOS
 Estos son los requisitos con los cuales se trabajó este proyecto
@@ -66,7 +66,8 @@ como prueba de ello, se muestra el resultado final de los contenedores montados:
 ![final containers](README-IMG/final-Containers.png)
 
 y el resultado se sube a [Docker Hub](https://hub.docker.com/)
-![final push](README-IMG/push-final)
+
+![final push](README-IMG/push-final.png)
 
 
 - Para los siguientes calculos, como se mostró anteriormente, se montaron 3 contenedores para su ejecución y prueba, con todos funciona, por lo cual se dejara una URL de prueba por cada servicio.
@@ -74,22 +75,22 @@ y el resultado se sube a [Docker Hub](https://hub.docker.com/)
 ```
 http://localhost:34000/seno
 ```
-![seno](README-IMG/prueba-seno)
+![seno](README-IMG/prueba-seno.png)
 ### Servicio para calcular Cos
 ```
 http://localhost:34000/coseno
 ```
-![seno](README-IMG/prueba-coseno)
+![seno](README-IMG/prueba-coseno.png)
 ### Servicio para Calcular palindormos
 ```
 http://localhost:34000/palindromo
 ```
-![seno](README-IMG/prueba-palindromo)
+![seno](README-IMG/prueba-palindromo.png)
 ### Servicio para calcular la magnitud de un vector
 ```
-http://localhost:34000/palindromo
+http://localhost:34000/magnitud
 ```
-![seno](README-IMG/prueba-magnitud)
+![seno](README-IMG/prueba-magnitud.png)
 ## DESCARGA DE LA IMAGEN Y USO LOCAL
 Para poder realizar pruebas localmente, ejecute el siguiente comando en consola:
 ```
@@ -103,7 +104,7 @@ docker run -d -p 34000:57000 --name proofcontainer foreman1018/arep-taller5
 
 y puede realizar pruebas con las urls de los servicios suministrados
 ## AUTOR
-Santiago Forero Yate, Estudiante de ingeneria de Sistemas
+* **Santiago Forero Yate** - [santiforero1018](https://github.com/santiforero1018)
 ## Agradecimientos
 
 * Especial Agradecimiento al profesor [Luis Daniel Benavides Navarro](https://ldbn.is.escuelaing.edu.co/) por brindar el conocimiento necesario en la realización de este trabajo
