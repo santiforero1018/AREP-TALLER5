@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindromo</title>
+    <script src="JS/palindrome.js"></script>
 </head>
 <body>
-    <h1>palindormo</h1>
+    <h1>palindromo</h1>
+
+    <form action="/result">
+        <label for="">Ingrese la cadena:</label>
+        <input type="text" id="chain">
+        <input type="button" value="calculate" class="calc-button" onclick="requestOp()">
+    </form>
+
+    <div id="resp"></div>
+
+    <script>
+        function requestOp() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function(){
+            document.getElementById("resp").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "/result?op=palindromo&chain="+document.getElementById("chain").value);
+        xhttp.send();
+    }
+    </script>
 </body>
 </html>

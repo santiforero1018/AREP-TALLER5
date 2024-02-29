@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIN operation</title>
+    <!-- <script src="JS/sin.js"></script> -->
 </head>
+
 <body>
-    <h1>Operacion Sin</h1>
+    <h1>SIN Operation</h1>
+
+    <form action="/result">
+        <label for="">Ingrese el numero:</label>
+        <input type="text" id="num1">
+        <input type="button" value="calculate" class="calc-button" onclick="requestOp()">
+    </form>
+
+    <div id="resp"></div>
+
+    <script>
+        function requestOp() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("resp").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "/result?op=sin&num1=" + document.getElementById("num1").value+ "&num2=0");
+            xhttp.send();
+        }
+    </script>
 </body>
+
 </html>

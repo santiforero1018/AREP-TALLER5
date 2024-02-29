@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magnitud de un vector</title>
+    <script src="JS/magnitud.js"></script>
 </head>
+
 <body>
     <h1>magnitud de un vector </h1>
+
+    <form action="/result">
+        <label for="">Ingrese el numero 1:</label>
+        <input type="text" id="num1">
+        <label for="">Ingrese el numero 2:</label>
+        <input type="text" id="num2">
+        <input type="button" value="calculate" class="calc-button" onclick="requestOp()">
+    </form>
+
+    <div id="resp"></div>
+
+    <script>
+        function requestOp() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("resp").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "/result?op=mag&num1=" + document.getElementById("num1").value + "&num2=" + document.getElementById("num2").value);
+            xhttp.send();
+        }
+    </script>
 </body>
+
 </html>
